@@ -94,14 +94,19 @@ body {
 
 /* Меню */
 .menu {
-    max-width: 1200px; /* Розширення меню */
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+   
+   
 }
 
+#menu{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+
+    justify-content: space-evenly;
+
+
+}
 .menu h2 {
     font-size: 32px;
     margin-bottom: 20px;
