@@ -13,7 +13,7 @@ body {
 /* Бічна панель */
 .sidebar {
     width: 250px;
-    background-color: #4E342E;  /* Коричневий відтінок */
+    background-color: #4E342E;
     color: white;
     padding: 20px;
     height: 100vh;
@@ -51,13 +51,13 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    background: #3d2b1f;  /* Темно-коричневий */
+    background: #3d2b1f;
     border-radius: 5px;
     text-align: center;
 }
 
 .nav-menu ul li a:hover {
-    background: #5d4037;  /* Світліший коричневий */
+    background: #5d4037;
 }
 
 /* Основний контент */
@@ -70,7 +70,7 @@ body {
     gap: 30px;
 }
 
-/* Блок привітання */
+/* Блоки */
 .welcome, .contacts, .menu {
     background-color: white;
     padding: 20px;
@@ -78,86 +78,124 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Фото */
-.photo {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Зменшення фото */
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.photo img {
+/* Стилі для всіх зображень на сайті */
+.photo img, .main-content img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Меню */
+/* Фотогалерея */
+.photo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.photo-gallery img {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+}
+
 .menu {
-    max-width: 1200px; /* Розширення меню */
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f1e4;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.menu {
+    width: 48%;
+    padding: 20px;
+    background: #f8f1e4;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .menu h2 {
     font-size: 32px;
+    color: #5a3825;
     margin-bottom: 20px;
-    color: #8B4513;  /* Темно-коричневий */
-    width: 100%;
-    text-align: center;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
 }
 
-.menu-left, .menu-right {
-    width: 48%;
+.menu-items {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
 }
 
-.menu-category {
-    width: 100%;
-}
-
-.menu-category h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #8B4513;  /* Темно-коричневий */
+.menu-column {
+    width: 48%;
 }
 
 .menu-item {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    padding: 10px;
-    background: #fff8e1;  /* Світлий жовтий */
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .menu-item p {
     font-size: 18px;
-    margin-bottom: 5px;
+    color: #5a3825;
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
 }
 
-/* Бронювання */
-.booking {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);  /* Центрування по обох осях */
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: auto;
+.price {
+    color: #d35400;
+    font-weight: bold;
 }
 
-/* Темний фон для overlay */
+@media (max-width: 1024px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+.price {
+    color: #d35400;
+    font-weight: bold;
+}
+/* Затемнений фон */
 .overlay {
     display: none;
     position: fixed;
@@ -165,36 +203,102 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Чорний з прозорістю */
-    z-index: 1; /* Повинен бути під модальним вікном */
+    background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+    z-index: 999;
 }
 
-
-
-.booking h2 {
+/* Стиль модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #8B5E3B, #5A3825); /* Перехід між відтінками коричневого */
+    color: #fff; /* Білий текст */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 380px;
     text-align: center;
-    color: #8B4513;
-    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-.booking input, .booking button {
+/* Анімація появи */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Стиль заголовка */
+.modal h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Закриваюча кнопка */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ffcc99;
+}
+
+/* Стилі для форми */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Стиль для полів введення */
+.modal input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    color: #5A3825;
+    transition: 0.3s;
 }
 
-.booking button {
-    background-color: #4E342E;  /* Коричневий */
-    color: white;
+.modal input:focus {
+    border: 2px solid #ffcc99;
+}
+
+/* Стиль кнопки */
+.modal button {
+    background: #D2691E; /* Темно-коричневий */
+    color: #fff;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.booking button:hover {
-    background-color: #5d4037;  /* Світліший коричневий */
+.modal button:hover {
+    background: #A0522D; /* Трохи темніший відтінок */
 }
-
 /* Відгуки */
 .reviews {
     display: flex;
@@ -219,7 +323,7 @@ body {
 }
 
 .review {
-    background-color: #f0f4c3;  /* Світло-зелений фон */
+    background-color: #f0f4c3;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -236,7 +340,7 @@ body {
 }
 
 .review:hover {
-    background-color: #e1f5fe;  /* Легкий акцент при наведенні */
+    background-color: #e1f5fe;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
@@ -256,7 +360,7 @@ body {
 }
 
 .review-form button {
-    background-color: #4E342E;  /* Коричневий */
+    background-color: #4E342E;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -265,5 +369,15 @@ body {
 }
 
 .review-form button:hover {
-    background-color: #5d4037;  /* Світліший коричневий */
+    background-color: #5d4037;
+}
+
+#menu{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+
+    justify-content: space-evenly;
+
+
 }
