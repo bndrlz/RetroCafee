@@ -4,12 +4,10 @@
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
-
 body {
     display: flex;
     background-color: #f8e8d0;
 }
-
 /* Бічна панель */
 .sidebar {
     width: 250px;
@@ -22,29 +20,24 @@ body {
     align-items: center;
     position: fixed;
 }
-
 .logo img {
     width: 100%;
     display: block;
     margin-bottom: 30px;
 }
-
 /* Меню навігації */
 .nav-menu {
     width: 100%;
     margin-top: 30px;
 }
-
 .nav-menu ul {
     list-style: none;
     padding: 0;
     text-align: center;
 }
-
 .nav-menu ul li {
     margin-bottom: 15px;
 }
-
 .nav-menu ul li a {
     display: block;
     padding: 10px;
@@ -55,11 +48,9 @@ body {
     border-radius: 5px;
     text-align: center;
 }
-
 .nav-menu ul li a:hover {
     background: #5d4037;
 }
-
 /* Основний контент */
 .main-content {
     margin-left: 270px;
@@ -69,7 +60,6 @@ body {
     flex-direction: column;
     gap: 30px;
 }
-
 /* Блоки */
 .welcome, .contacts, .menu {
     background-color: white;
@@ -77,7 +67,6 @@ body {
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Стилі для всіх зображень на сайті */
 .photo img, .main-content img {
     width: 100%;
@@ -86,7 +75,6 @@ body {
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Фотогалерея */
 .photo {
     display: grid;
@@ -94,106 +82,10 @@ body {
     gap: 15px;
     margin-bottom: 40px;
 }
-
 .photo-gallery img {
     object-fit: cover;
     height: 250px;
     width: 250px;
-}
-
-.menu {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #f8f1e4;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.menu-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-}
-
-.menu {
-    width: 48%;
-    padding: 20px;
-    background: #f8f1e4;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.menu h2 {
-    font-size: 32px;
-    color: #5a3825;
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    text-transform: uppercase;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu-column {
-    width: 48%;
-}
-
-.menu-item {
-    background: #fff8e1;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.menu-item:hover {
-    transform: scale(1.02);
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.menu-item h3 {
-    font-size: 22px;
-    color: #8B4513;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.menu-item p {
-    font-size: 18px;
-    color: #5a3825;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-.price {
-    color: #d35400;
-    font-weight: bold;
-}
-
-@media (max-width: 1024px) {
-    .menu-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-}
-
-.price {
-    color: #d35400;
-    font-weight: bold;
 }
 /* Затемнений фон */
 .overlay {
@@ -206,7 +98,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
     z-index: 999;
 }
-
 /* Стиль модального вікна */
 .modal {
     display: none;
@@ -225,7 +116,6 @@ body {
     font-family: 'Arial', sans-serif;
     animation: fadeIn 0.3s ease-in-out;
 }
-
 /* Анімація появи */
 @keyframes fadeIn {
     from {
@@ -237,14 +127,12 @@ body {
         transform: translate(-50%, -50%);
     }
 }
-
 /* Стиль заголовка */
 .modal h2 {
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: bold;
 }
-
 /* Закриваюча кнопка */
 .close {
     position: absolute;
@@ -299,50 +187,53 @@ body {
 .modal button:hover {
     background: #A0522D; /* Трохи темніший відтінок */
 }
+
 /* Відгуки */
 .reviews {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f1e0c6, #d4b79b); /* Градієнт з світлого бежевого в коричневий */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .reviews h2 {
     text-align: center;
-    color: #8B4513;
+    color: #3c2e1f; /* Темний коричневий для заголовка */
     margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .reviews-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .review {
-    background-color: #f0f4c3;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f5e1c7; /* Світлий коричневий фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .review p {
-    font-size: 16px;
+    font-size: 1.1em; /* Трохи більший шрифт для читабельності */
     margin-bottom: 10px;
     font-style: italic;
 }
 
 .review strong {
-    color: #8B4513;
+    color: #3e2723; /* Темно-коричневий для акцентів */
 }
 
 .review:hover {
-    background-color: #e1f5fe;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+    background-color: #f7e8d8; 
+    transform: translateY(-5px); /* Легкий ефект підйому */
 }
 
 /* Форма відгуку */
@@ -351,33 +242,183 @@ body {
     flex-direction: column;
 }
 
+.review-form label {
+    font-size: 1.1em;
+    color: #5c4033; /* Теплий коричневий для тексту */
+    margin-bottom: 5px;
+}
+
 .review-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #ddd;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 .review-form button {
-    background-color: #4E342E;
+    background-color: #3e2723; /* Темно-коричнева кнопка */
     color: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
     border: none;
     cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .review-form button:hover {
-    background-color: #5d4037;
+    background-color: #5d4037; /* Світліший коричневий при наведенні */
 }
-
-#menu{
+/* #menu{
     max-width: 1200px;
     display: flex;
     justify-content: center;
 
     justify-content: space-evenly;
 
+} */
 
+.promotions-section {
+    padding: 40px 20px; /* Зменшено відступи */
+    background: linear-gradient(135deg, #f1e0c6, #d4b79b); /* Градієнт з світлого бежевого в коричневий */
+    text-align: center;
+    border-radius: 10px; /* Зменшено радіус */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .promotions-section h2 {
+    font-size: 2em; /* Зменшено розмір шрифта */
+    color: #3c2e1f; /* Темний коричневий для заголовка */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .promotion, .event {
+    background-color: #f5e1c7; /* Світлий, теплий коричневий фон */
+    border-radius: 8px; /* Зменшено радіус */
+    padding: 20px; /* Зменшено внутрішні відступи */
+    margin-bottom: 20px; /* Зменшено вертикальні відступи */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .promotion h3, .event h3 {
+    font-size: 1.6em; /* Зменшено розмір заголовка */
+    color: #5c4033; /* Теплий, темно-коричневий */
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .promotion p, .event p {
+    font-size: 1em; /* Зменшено розмір тексту */
+    color: #4a2f1f; /* Читабельний коричневий */
+    line-height: 1.4;
+    margin-bottom: 10px; /* Зменшено вертикальні відступи */
+  }
+  .promotion p strong, .event p strong {
+    color: #3e2723; /* Насичений темно-коричневий для акцентів */
+  }
+  
+  .promotion .button, .event .button {
+    background-color: #3e2723; /* Темно-коричнева кнопка */
+    color: #fff;
+    padding: 8px 16px; /* Зменшено розмір кнопки */
+    border-radius: 20px; /* Зменшено радіус */
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .promotion .button:hover, .event .button:hover {
+    background-color: #5d4037; /* Світліший коричневий при наведенні */
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
 }
+
+.menu {
+    width: 48%;
+    padding: 20px;
+    background: #f5e1c7; /* Світлий коричневий фон */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 32px;
+    color: #5a3825; /* Темно-коричневий заголовок */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-column {
+    width: 48%;
+}
+
+.menu-item {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    color: #8B4513; /* Теплий коричневий для назв */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-item p {
+    font-size: 18px;
+    color: #5a3825; /* Темно-коричневий текст */
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.price {
+    color: #d35400; /* Яскравий помаранчевий для ціни */
+    font-weight: bold;
+}
+
+/* Адаптивність для мобільних пристроїв
+@media (max-width: 1024px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+} */
